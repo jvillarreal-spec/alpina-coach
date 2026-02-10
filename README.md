@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alpina Coach Nutricional (MVP)
 
-## Getting Started
+Una aplicación web responsive diseñada para ayudar a los clientes de Alpina a mejorar sus hábitos alimenticios mediante un coach nutricional inteligente impulsado por IA.
 
-First, run the development server:
+## 🚀 Tecnologías
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Frontend**: Next.js 14+ (App Router), TypeScript, Tailwind CSS, shadcn/ui.
+- **Backend**: Next.js API Routes.
+- **Base de Datos & Auth**: Supabase (PostgreSQL, Auth, Storage).
+- **IA**: Anthropic Claude 3.5 Sonnet (con soporte de visión para análisis de fotos de comida).
+- **Métricas**: Recharts.
+
+## 📦 Estructura del Proyecto
+
+```text
+alpina-coach/
+  app/              # Rutas de la aplicación (Auth, Consumer, Admin, API)
+  components/       # Componentes de UI reutilizables
+  lib/              # Lógica de Supabase, AI y utilidades
+  data/             # Catálogos de productos y alimentos
+  supabase/         # Migraciones de base de datos
+  types/            # Definiciones de TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Configuración Inicial
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonar el repositorio e instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Configurar variables de entorno:**
+   Crea un archivo `.env.local` basado en `.env.local.example` y agrega tus credenciales de Supabase y Anthropic.
 
-## Learn More
+3. **Base de Datos:**
+   Ejecuta la migración ubicada en `supabase/migrations/20240209000000_initial_schema.sql` en tu panel SQL de Supabase.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Correr en desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Funcionalidades Core
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Login Magic Link**: Acceso sin contraseña usando solo email.
+- **Onboarding Inteligente**: Cálculo automático de TMB y meta calórica (Harris-Benedict).
+- **Chat con IA**:
+  - Análisis de comida por texto.
+  - Análisis de comida por imagen (fotos reales).
+  - Recomendaciones naturales de productos Alpina relevantes.
+- **Registro Diario**: Visualización de macros (Proteína, Carbos, Grasa) y calorías restantes.
+- **Panel Admin**:
+  - Métricas de usuarios activos y registro de alimentos.
+  - Distribución de objetivos.
+  - Gestión de usuarios y exportación a CSV.
 
-## Deploy on Vercel
+## 🎨 Diseño
+Basado en la identidad de marca Alpina:
+- Azul Oscuro: `#1B3A5C`
+- Naranja: `#E87722`
+- Verde: `#2E8B57`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Desarrollado para Alpina S.A.

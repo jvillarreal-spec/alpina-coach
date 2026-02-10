@@ -1,0 +1,12 @@
+[project]
+id = "nheqvwelzdaicksxyvck"
+
+[db]
+port = 54322
+
+[api]
+port = 54321
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]

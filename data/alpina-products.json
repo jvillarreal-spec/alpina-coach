@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Yogur Griego Alpina Natural",
+    "category": "yogur",
+    "serving_size": "150g",
+    "calories": 110,
+    "protein": 12,
+    "carbs": 6,
+    "fat": 4,
+    "use_cases": ["sustituto de crema de leche", "snack alto en proteína", "desayuno saludable"]
+  },
+  {
+    "name": "Yogur Griego Alpina Fresa",
+    "category": "yogur",
+    "serving_size": "150g",
+    "calories": 130,
+    "protein": 11,
+    "carbs": 14,
+    "fat": 3.5,
+    "use_cases": ["snack saludable", "postre ligero"]
+  },
+  {
+    "name": "Avena Alpina Original",
+    "category": "bebida láctea",
+    "serving_size": "250ml",
+    "calories": 180,
+    "protein": 6,
+    "carbs": 30,
+    "fat": 4,
+    "use_cases": ["bebida energizante", "snack"]
+  },
+  {
+    "name": "Bon Yurt Original",
+    "category": "bebida láctea",
+    "serving_size": "170g",
+    "calories": 210,
+    "protein": 5,
+    "carbs": 32,
+    "fat": 7,
+    "use_cases": ["snack", "desayuno rápido"]
+  },
+  {
+    "name": "Alpinito Fresa",
+    "category": "queso tipo petit suisse",
+    "serving_size": "45g",
+    "calories": 60,
+    "protein": 3,
+    "carbs": 8,
+    "fat": 2,
+    "use_cases": ["snack para niños", "fuente de calcio"]
+  },
+  {
+    "name": "Leche Alpina Entera",
+    "category": "leche",
+    "serving_size": "200ml",
+    "calories": 120,
+    "protein": 6,
+    "carbs": 9,
+    "fat": 6.5,
+    "use_cases": ["base de batidos", "cocina en general"]
+  },
+  {
+    "name": "Leche Deslactosada Alpina",
+    "category": "leche",
+    "serving_size": "200ml",
+    "calories": 90,
+    "protein": 6,
+    "carbs": 9,
+    "fat": 3.5,
+    "use_cases": ["fácil digestión", "base de batidos"]
+  },
+  {
+    "name": "Queso Campesino Alpina",
+    "category": "queso",
+    "serving_size": "30g",
+    "calories": 80,
+    "protein": 6,
+    "carbs": 1,
+    "fat": 6,
+    "use_cases": ["fuente de proteína", "acompañamiento de arepas"]
+  },
+  {
+    "name": "Quesito Alpina",
+    "category": "queso",
+    "serving_size": "30g",
+    "calories": 70,
+    "protein": 5,
+    "carbs": 1,
+    "fat": 5,
+    "use_cases": ["snack", "acompañamiento"]
+  },
+  {
+    "name": "Bebida de Almendras Alpina",
+    "category": "bebida vegetal",
+    "serving_size": "200ml",
+    "calories": 40,
+    "protein": 1,
+    "carbs": 2,
+    "fat": 3,
+    "use_cases": ["alternativa láctea", "batidos bajos en calorías"]
+  },
+  {
+    "name": "Néctar de Frutas Alpina Piña",
+    "category": "bebida",
+    "serving_size": "200ml",
+    "calories": 90,
+    "protein": 0,
+    "carbs": 22,
+    "fat": 0,
+    "use_cases": ["hidratación", "acompañamiento"]
+  },
+  {
+    "name": "Pudín Alpina Vainilla",
+    "category": "postre",
+    "serving_size": "100g",
+    "calories": 120,
+    "protein": 3,
+    "carbs": 20,
+    "fat": 3,
+    "use_cases": ["postre"]
+  },
+  {
+    "name": "Finesse Yogur con Fruta",
+    "category": "yogur",
+    "serving_size": "150g",
+    "calories": 60,
+    "protein": 5,
+    "carbs": 10,
+    "fat": 0,
+    "use_cases": ["bajo en calorías", "control de peso"]
+  },
+  {
+    "name": "Finesse Queso Crema",
+    "category": "queso",
+    "serving_size": "30g",
+    "calories": 45,
+    "protein": 3,
+    "carbs": 2,
+    "fat": 3,
+    "use_cases": ["untable bajo en grasa"]
+  },
+  {
+    "name": "Kumis Alpina",
+    "category": "bebida láctea",
+    "serving_size": "200ml",
+    "calories": 150,
+    "protein": 6,
+    "carbs": 18,
+    "fat": 6,
+    "use_cases": ["digestión", "snack"]
+  },
+  {
+    "name": "Avena Alpina Canela",
+    "category": "bebida láctea",
+    "serving_size": "250ml",
+    "calories": 185,
+    "protein": 6,
+    "carbs": 31,
+    "fat": 4,
+    "use_cases": ["snack", "energía"]
+  },
+  {
+    "name": "Yox con Probióticos",
+    "category": "bebida láctea",
+    "serving_size": "100ml",
+    "calories": 60,
+    "protein": 3,
+    "carbs": 12,
+    "fat": 0,
+    "use_cases": ["salud digestiva", "defensas"]
+  },
+  {
+    "name": "Sabor y Salud Leche Semidescremada",
+    "category": "leche",
+    "serving_size": "200ml",
+    "calories": 90,
+    "protein": 6,
+    "carbs": 9,
+    "fat": 3.5,
+    "use_cases": ["uso diario diario", "balance nutricional"]
+  },
+  {
+    "name": "Queso Doble Crema Alpina",
+    "category": "queso",
+    "serving_size": "30g",
+    "calories": 90,
+    "protein": 6.5,
+    "carbs": 1,
+    "fat": 7,
+    "use_cases": ["para fundir", "sandwiches"]
+  },
+  {
+    "name": "Queso Mozzarella Alpina",
+    "category": "queso",
+    "serving_size": "30g",
+    "calories": 85,
+    "protein": 7,
+    "carbs": 1,
+    "fat": 6,
+    "use_cases": ["para pizza", "pastas"]
+  },
+  {
+    "name": "Regeneris Fresa",
+    "category": "yogur",
+    "serving_size": "150g",
+    "calories": 140,
+    "protein": 5,
+    "carbs": 22,
+    "fat": 3,
+    "use_cases": ["salud digestiva"]
+  },
+  {
+    "name": "Alpina Baby Etapa 2",
+    "category": "alimento infantil",
+    "serving_size": "113g",
+    "calories": 90,
+    "protein": 1,
+    "carbs": 20,
+    "fat": 0.5,
+    "use_cases": ["alimentación complementaria"]
+  },
+  {
+    "name": "Mantequilla Alpina con Sal",
+    "category": "mantequilla",
+    "serving_size": "10g",
+    "calories": 70,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 8,
+    "use_cases": ["cocina", "untable"]
+  },
+  {
+    "name": "Crema de Leche Alpina",
+    "category": "crema de leche",
+    "serving_size": "15g",
+    "calories": 45,
+    "protein": 0.5,
+    "carbs": 1,
+    "fat": 4.5,
+    "use_cases": ["salsas", "repostería"]
+  },
+  {
+    "name": "Arequipe Alpina",
+    "category": "dulce de leche",
+    "serving_size": "20g",
+    "calories": 65,
+    "protein": 1,
+    "carbs": 12,
+    "fat": 1.5,
+    "use_cases": ["postre", "acompañante"]
+  },
+  {
+    "name": "Gelatina Alpina Surtida",
+    "category": "postre",
+    "serving_size": "120g",
+    "calories": 80,
+    "protein": 2,
+    "carbs": 18,
+    "fat": 0,
+    "use_cases": ["postre ligero"]
+  },
+  {
+    "name": "Boni Queso",
+    "category": "queso",
+    "serving_size": "20g",
+    "calories": 60,
+    "protein": 5,
+    "carbs": 1,
+    "fat": 4.5,
+    "use_cases": ["lonchera", "snack"]
+  },
+  {
+    "name": "Frutto Manzana",
+    "category": "bebida",
+    "serving_size": "200ml",
+    "calories": 80,
+    "protein": 0,
+    "carbs": 20,
+    "fat": 0,
+    "use_cases": ["hidratación"]
+  },
+  {
+    "name": "Yogur Alpina Vaso Melocotón",
+    "category": "yogur",
+    "serving_size": "150g",
+    "calories": 150,
+    "protein": 5,
+    "carbs": 25,
+    "fat": 3.5,
+    "use_cases": ["desayuno", "merienda"]
+  },
+  {
+    "name": "Leche en Polvo Alpina",
+    "category": "leche",
+    "serving_size": "26g",
+    "calories": 130,
+    "protein": 7,
+    "carbs": 10,
+    "fat": 7,
+    "use_cases": ["reconstitución", "cocina"]
+  }
+]

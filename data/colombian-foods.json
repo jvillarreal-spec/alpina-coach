@@ -1,0 +1,722 @@
+[
+    {
+        "name": "Arepa Paisa",
+        "region": "Antioquia",
+        "serving_size": "1 unidad (80g)",
+        "calories": 150,
+        "protein": 3,
+        "carbs": 30,
+        "fat": 2
+    },
+    {
+        "name": "Bandeja Paisa",
+        "region": "Antioquia",
+        "serving_size": "1 plato completo",
+        "calories": 1200,
+        "protein": 45,
+        "carbs": 130,
+        "fat": 60
+    },
+    {
+        "name": "Ajiaco Santafereño",
+        "region": "Bogotá / Cundinamarca",
+        "serving_size": "1 tazón con guarnición",
+        "calories": 450,
+        "protein": 18,
+        "carbs": 60,
+        "fat": 15
+    },
+    {
+        "name": "Sancocho de Gallina",
+        "region": "Varias",
+        "serving_size": "1 plato grande",
+        "calories": 550,
+        "protein": 25,
+        "carbs": 75,
+        "fat": 18
+    },
+    {
+        "name": "Empanada de Pipa",
+        "region": "Antioquia",
+        "serving_size": "1 unidad mediana",
+        "calories": 180,
+        "protein": 4,
+        "carbs": 22,
+        "fat": 9
+    },
+    {
+        "name": "Tamal Tolimense",
+        "region": "Tolima",
+        "serving_size": "1 unidad grande (400g)",
+        "calories": 650,
+        "protein": 22,
+        "carbs": 60,
+        "fat": 35
+    },
+    {
+        "name": "Lechona",
+        "region": "Tolima",
+        "serving_size": "1 porción (250g)",
+        "calories": 480,
+        "protein": 18,
+        "carbs": 40,
+        "fat": 28
+    },
+    {
+        "name": "Arroz con Pollo",
+        "region": "Nacional",
+        "serving_size": "1 porción grande",
+        "calories": 420,
+        "protein": 20,
+        "carbs": 55,
+        "fat": 12
+    },
+    {
+        "name": "Mote de Queso",
+        "region": "Costa Caribe",
+        "serving_size": "1 tazón",
+        "calories": 380,
+        "protein": 12,
+        "carbs": 45,
+        "fat": 18
+    },
+    {
+        "name": "Pescado Frito con Arroz con Coco",
+        "region": "Costa Caribe/Pacífica",
+        "serving_size": "1 plato completo",
+        "calories": 650,
+        "protein": 28,
+        "carbs": 80,
+        "fat": 25
+    },
+    {
+        "name": "Arepa de Huevo",
+        "region": "Costa Caribe",
+        "serving_size": "1 unidad",
+        "calories": 320,
+        "protein": 10,
+        "carbs": 35,
+        "fat": 15
+    },
+    {
+        "name": "Carimañola",
+        "region": "Costa Caribe",
+        "serving_size": "1 unidad",
+        "calories": 240,
+        "protein": 6,
+        "carbs": 25,
+        "fat": 13
+    },
+    {
+        "name": "Butifarra Soledeña",
+        "region": "Atlántico",
+        "serving_size": "3 unidades pequeñas",
+        "calories": 180,
+        "protein": 12,
+        "carbs": 2,
+        "fat": 14
+    },
+    {
+        "name": "Pandebono",
+        "region": "Valle del Cauca",
+        "serving_size": "1 unidad mediana",
+        "calories": 210,
+        "protein": 5,
+        "carbs": 28,
+        "fat": 10
+    },
+    {
+        "name": "Aborrajado",
+        "region": "Valle del Cauca",
+        "serving_size": "1 unidad",
+        "calories": 280,
+        "protein": 6,
+        "carbs": 35,
+        "fat": 12
+    },
+    {
+        "name": "Lulada",
+        "region": "Valle del Cauca",
+        "serving_size": "1 vaso (300ml)",
+        "calories": 180,
+        "protein": 1,
+        "carbs": 45,
+        "fat": 0
+    },
+    {
+        "name": "Arroz de Lisa",
+        "region": "Atlántico",
+        "serving_size": "1 porción",
+        "calories": 350,
+        "protein": 15,
+        "carbs": 60,
+        "fat": 6
+    },
+    {
+        "name": "Patacón con Todo",
+        "region": "Nacional",
+        "serving_size": "1 patacón grande con carne/pollo/queso",
+        "calories": 550,
+        "protein": 25,
+        "carbs": 65,
+        "fat": 22
+    },
+    {
+        "name": "Chirulito (Arepa de Chocolo)",
+        "region": "Antioquia",
+        "serving_size": "1 unidad con queso",
+        "calories": 320,
+        "protein": 8,
+        "carbs": 45,
+        "fat": 12
+    },
+    {
+        "name": "Mazamorra Paisa",
+        "region": "Antioquia",
+        "serving_size": "1 tazón con bocadillo",
+        "calories": 280,
+        "protein": 5,
+        "carbs": 60,
+        "fat": 2
+    },
+    {
+        "name": "Caldo de Costilla",
+        "region": "Andina",
+        "serving_size": "1 tazón",
+        "calories": 250,
+        "protein": 15,
+        "carbs": 20,
+        "fat": 12
+    },
+    {
+        "name": "Changua",
+        "region": "Bogotá/Cundinamarca",
+        "serving_size": "1 tazón",
+        "calories": 210,
+        "protein": 10,
+        "carbs": 15,
+        "fat": 12
+    },
+    {
+        "name": "Hormigas Culonas",
+        "region": "Santander",
+        "serving_size": "1 porción pequeña (20g)",
+        "calories": 120,
+        "protein": 10,
+        "carbs": 1,
+        "fat": 8
+    },
+    {
+        "name": "Mute Santafereño",
+        "region": "Santander",
+        "serving_size": "1 tazón",
+        "calories": 480,
+        "protein": 22,
+        "carbs": 50,
+        "fat": 20
+    },
+    {
+        "name": "Pepitoria",
+        "region": "Santander",
+        "serving_size": "1 porción",
+        "calories": 350,
+        "protein": 20,
+        "carbs": 30,
+        "fat": 15
+    },
+    {
+        "name": "Sobrebarriga en Salsa",
+        "region": "Bogotá",
+        "serving_size": "1 porción (150g)",
+        "calories": 320,
+        "protein": 25,
+        "carbs": 8,
+        "fat": 20
+    },
+    {
+        "name": "Oblea con Todo",
+        "region": "Nacional",
+        "serving_size": "1 unidad",
+        "calories": 350,
+        "protein": 3,
+        "carbs": 65,
+        "fat": 10
+    },
+    {
+        "name": "Natilla",
+        "region": "Antioquia/Andina",
+        "serving_size": "1 porción (100g)",
+        "calories": 220,
+        "protein": 3,
+        "carbs": 45,
+        "fat": 4
+    },
+    {
+        "name": "Buñuelo",
+        "region": "Antioquia/Andina",
+        "serving_size": "1 unidad mediana",
+        "calories": 190,
+        "protein": 4,
+        "carbs": 20,
+        "fat": 11
+    },
+    {
+        "name": "Arepa Boyacense",
+        "region": "Boyacá",
+        "serving_size": "1 unidad",
+        "calories": 280,
+        "protein": 6,
+        "carbs": 40,
+        "fat": 12
+    },
+    {
+        "name": "Puchero Santafereño",
+        "region": "Bogotá",
+        "serving_size": "1 plato completo",
+        "calories": 680,
+        "protein": 35,
+        "carbs": 85,
+        "fat": 25
+    },
+    {
+        "name": "Trucha al Ajillo",
+        "region": "Eje Cafetero",
+        "serving_size": "1 unidad",
+        "calories": 380,
+        "protein": 30,
+        "carbs": 5,
+        "fat": 28
+    },
+    {
+        "name": "Chorizo con Arepa",
+        "region": "Antioquia/Eje Cafetero",
+        "serving_size": "1 chorizo + 1 arepa",
+        "calories": 450,
+        "protein": 18,
+        "carbs": 32,
+        "fat": 30
+    },
+    {
+        "name": "Morcilla",
+        "region": "Nacional",
+        "serving_size": "1 porción (80g)",
+        "calories": 280,
+        "protein": 12,
+        "carbs": 25,
+        "fat": 15
+    },
+    {
+        "name": "Salpicón de Frutas",
+        "region": "Nacional",
+        "serving_size": "1 vaso grande",
+        "calories": 220,
+        "protein": 2,
+        "carbs": 50,
+        "fat": 1
+    },
+    {
+        "name": "Cuajada con Melao",
+        "region": "Andina",
+        "serving_size": "1 porción",
+        "calories": 280,
+        "protein": 10,
+        "carbs": 40,
+        "fat": 9
+    },
+    {
+        "name": "Pastel de Garbanzo",
+        "region": "Cúcuta",
+        "serving_size": "1 unidad",
+        "calories": 260,
+        "protein": 8,
+        "carbs": 35,
+        "fat": 10
+    },
+    {
+        "name": "Empanada de Pescado",
+        "region": "Amazonas",
+        "serving_size": "1 unidad",
+        "calories": 210,
+        "protein": 6,
+        "carbs": 24,
+        "fat": 10
+    },
+    {
+        "name": "Fartum de Queso",
+        "region": "Amazonas",
+        "serving_size": "1 unidad",
+        "calories": 240,
+        "protein": 8,
+        "carbs": 30,
+        "fat": 9
+    },
+    {
+        "name": "Cuy Asado",
+        "region": "Nariño",
+        "serving_size": "1 cuarto de cuy",
+        "calories": 450,
+        "protein": 45,
+        "carbs": 2,
+        "fat": 30
+    },
+    {
+        "name": "Lapingachos",
+        "region": "Nariño",
+        "serving_size": "2 unidades",
+        "calories": 320,
+        "protein": 8,
+        "carbs": 40,
+        "fat": 15
+    },
+    {
+        "name": "Canelazo",
+        "region": "Cundinamarca/Boyacá",
+        "serving_size": "1 taza (200ml)",
+        "calories": 150,
+        "protein": 0,
+        "carbs": 30,
+        "fat": 0
+    },
+    {
+        "name": "Aguapanela con Queso",
+        "region": "Nacional",
+        "serving_size": "1 taza + 1 porción queso",
+        "calories": 240,
+        "protein": 6,
+        "carbs": 40,
+        "fat": 6
+    },
+    {
+        "name": "Chicha de Maíz",
+        "region": "Andina",
+        "serving_size": "1 vaso (250ml)",
+        "calories": 180,
+        "protein": 2,
+        "carbs": 40,
+        "fat": 1
+    },
+    {
+        "name": "Champús",
+        "region": "Valle del Cauca",
+        "serving_size": "1 vaso",
+        "calories": 310,
+        "protein": 3,
+        "carbs": 70,
+        "fat": 2
+    },
+    {
+        "name": "Jugo de Borojó",
+        "region": "Pacífica",
+        "serving_size": "1 vaso",
+        "calories": 250,
+        "protein": 4,
+        "carbs": 55,
+        "fat": 1
+    },
+    {
+        "name": "Arroz con Coco (Dulce)",
+        "region": "Costa Caribe",
+        "serving_size": "1 porción (150g)",
+        "calories": 420,
+        "protein": 4,
+        "carbs": 85,
+        "fat": 8
+    },
+    {
+        "name": "Enyucado",
+        "region": "Costa Caribe",
+        "serving_size": "1 porción",
+        "calories": 320,
+        "protein": 3,
+        "carbs": 55,
+        "fat": 10
+    },
+    {
+        "name": "Cocada",
+        "region": "Costa Caribe",
+        "serving_size": "1 unidad",
+        "calories": 210,
+        "protein": 1,
+        "carbs": 40,
+        "fat": 5
+    },
+    {
+        "name": "Postre de Natas",
+        "region": "Andina",
+        "serving_size": "1 porción",
+        "calories": 380,
+        "protein": 8,
+        "carbs": 65,
+        "fat": 10
+    },
+    {
+        "name": "Manjar Blanco",
+        "region": "Valle del Cauca",
+        "serving_size": "1 porción (50g)",
+        "calories": 180,
+        "protein": 4,
+        "carbs": 35,
+        "fat": 2
+    },
+    {
+        "name": "Chontaduro con Sal y Miel",
+        "region": "Pacífica/Valle",
+        "serving_size": "3 unidades",
+        "calories": 280,
+        "protein": 6,
+        "carbs": 40,
+        "fat": 10
+    },
+    {
+        "name": "Tamal de Pipián",
+        "region": "Cauca",
+        "serving_size": "1 unidad pequeña",
+        "calories": 350,
+        "protein": 8,
+        "carbs": 45,
+        "fat": 15
+    },
+    {
+        "name": "Capirotada",
+        "region": "Tolima/Huila",
+        "serving_size": "1 porción",
+        "calories": 320,
+        "protein": 5,
+        "carbs": 55,
+        "fat": 8
+    },
+    {
+        "name": "Viudo de Pescado",
+        "region": "Tolima/Huila",
+        "serving_size": "1 plato grande",
+        "calories": 450,
+        "protein": 28,
+        "carbs": 65,
+        "fat": 12
+    },
+    {
+        "name": "Insulzo",
+        "region": "Tolima/Huila",
+        "serving_size": "1 unidad",
+        "calories": 180,
+        "protein": 1,
+        "carbs": 40,
+        "fat": 2
+    },
+    {
+        "name": "Quesillo Yaguareño",
+        "region": "Huila",
+        "serving_size": "1 unidad",
+        "calories": 220,
+        "protein": 12,
+        "carbs": 2,
+        "fat": 18
+    },
+    {
+        "name": "Bizcocho de Achira",
+        "region": "Huila",
+        "serving_size": "10 unidades pequeñas (30g)",
+        "calories": 140,
+        "protein": 3,
+        "carbs": 20,
+        "fat": 6
+    },
+    {
+        "name": "Solteritas",
+        "region": "Antioquia",
+        "serving_size": "1 unidad",
+        "calories": 110,
+        "protein": 1,
+        "carbs": 18,
+        "fat": 4
+    },
+    {
+        "name": "Brevas con Arequipe",
+        "region": "Bogotá",
+        "serving_size": "2 brevas + porción arequipe",
+        "calories": 240,
+        "protein": 2,
+        "carbs": 55,
+        "fat": 2
+    },
+    {
+        "name": "Postre de Tres Leches",
+        "region": "Nacional",
+        "serving_size": "1 porción",
+        "calories": 450,
+        "protein": 8,
+        "carbs": 75,
+        "fat": 15
+    },
+    {
+        "name": "Hogao (Salsa)",
+        "region": "Nacional",
+        "serving_size": "2 cucharadas",
+        "calories": 45,
+        "protein": 1,
+        "carbs": 4,
+        "fat": 3
+    },
+    {
+        "name": "Ají (Salsa)",
+        "region": "Nacional",
+        "serving_size": "2 cucharadas",
+        "calories": 15,
+        "protein": 0,
+        "carbs": 3,
+        "fat": 0
+    },
+    {
+        "name": "Suero Costeño",
+        "region": "Costa Caribe",
+        "serving_size": "2 cucharadas",
+        "calories": 60,
+        "protein": 1,
+        "carbs": 2,
+        "fat": 5.5
+    },
+    {
+        "name": "Arroz Blanco",
+        "region": "Nacional",
+        "serving_size": "1 porción (150g cocido)",
+        "calories": 200,
+        "protein": 4,
+        "carbs": 45,
+        "fat": 0.5
+    },
+    {
+        "name": "Papas Saladas",
+        "region": "Andina",
+        "serving_size": "2 unidades medianas",
+        "calories": 160,
+        "protein": 4,
+        "carbs": 36,
+        "fat": 0
+    },
+    {
+        "name": "Papas Chorreadas",
+        "region": "Andina",
+        "serving_size": "2 papas con salsa",
+        "calories": 280,
+        "protein": 8,
+        "carbs": 42,
+        "fat": 10
+    },
+    {
+        "name": "Yuca Frita",
+        "region": "Costa Caribe",
+        "serving_size": "100g",
+        "calories": 300,
+        "protein": 2,
+        "carbs": 45,
+        "fat": 12
+    },
+    {
+        "name": "Yuca Cocida",
+        "region": "Costa Caribe",
+        "serving_size": "100g",
+        "calories": 160,
+        "protein": 1.5,
+        "carbs": 38,
+        "fat": 0
+    },
+    {
+        "name": "Plátano Maduro Frito",
+        "region": "Nacional",
+        "serving_size": "1 unidad mediana",
+        "calories": 220,
+        "protein": 1,
+        "carbs": 45,
+        "fat": 5
+    },
+    {
+        "name": "Plátano Maduro Asado con Queso",
+        "region": "Nacional",
+        "serving_size": "1 unidad mediana",
+        "calories": 280,
+        "protein": 6,
+        "carbs": 50,
+        "fat": 7
+    },
+    {
+        "name": "Patacón Pisao",
+        "region": "Nacional",
+        "serving_size": "1 unidad",
+        "calories": 180,
+        "protein": 1,
+        "carbs": 35,
+        "fat": 4
+    },
+    {
+        "name": "Frijoles",
+        "region": "Antioquia",
+        "serving_size": "1 tazón (200g)",
+        "calories": 320,
+        "protein": 18,
+        "carbs": 55,
+        "fat": 4
+    },
+    {
+        "name": "Lentejas",
+        "region": "Nacional",
+        "serving_size": "1 tazón (200g)",
+        "calories": 280,
+        "protein": 22,
+        "carbs": 45,
+        "fat": 2
+    },
+    {
+        "name": "Carne Asada",
+        "region": "Nacional",
+        "serving_size": "1 porción (120g)",
+        "calories": 220,
+        "protein": 30,
+        "carbs": 0,
+        "fat": 10
+    },
+    {
+        "name": "Pollo Asado",
+        "region": "Nacional",
+        "serving_size": "1 cuarto (sin piel)",
+        "calories": 180,
+        "protein": 35,
+        "carbs": 0,
+        "fat": 4
+    },
+    {
+        "name": "Salchipapa",
+        "region": "Nacional",
+        "serving_size": "1 porción mediana",
+        "calories": 550,
+        "protein": 15,
+        "carbs": 60,
+        "fat": 30
+    },
+    {
+        "name": "Perro Caliente Colombiano",
+        "region": "Nacional",
+        "serving_size": "1 unidad con todo",
+        "calories": 480,
+        "protein": 12,
+        "carbs": 55,
+        "fat": 25
+    },
+    {
+        "name": "Chuzo Desgranado",
+        "region": "Costa Caribe/Barranquilla",
+        "serving_size": "1 porción grande",
+        "calories": 850,
+        "protein": 35,
+        "carbs": 70,
+        "fat": 50
+    },
+    {
+        "name": "Huevo Frito",
+        "region": "Nacional",
+        "serving_size": "1 unidad",
+        "calories": 90,
+        "protein": 6,
+        "carbs": 1,
+        "fat": 7
+    }
+]
