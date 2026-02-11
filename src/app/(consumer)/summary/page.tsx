@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { format, subDays, startOfDay, isSameDay } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { ChevronLeft, ChevronRight, Camera, Utensils } from 'lucide-react'
+import { getTodayDateString } from '@/lib/utils/dates'
 import Link from 'next/link'
 
 export default function SummaryPage() {
@@ -59,9 +60,13 @@ export default function SummaryPage() {
     const days = Array.from({ length: 7 }, (_, i) => subDays(new Date(), i)).reverse()
 
     const calorieTarget = profile?.daily_calorie_target || 2000
-    const caloriesConsumed = summary?.total_calories || 0
+    const caloriesConsumed = entries.reduce((acc, entry) => acc + (entry.calories || 0), 0)
     const caloriesRemaining = Math.max(calorieTarget - caloriesConsumed, 0)
     const caloriePercentage = Math.min((caloriesConsumed / calorieTarget) * 100, 100)
+
+    const totalProtein = entries.reduce((acc, entry) => acc + (Number(entry.protein) || 0), 0)
+    const totalCarbs = entries.reduce((acc, entry) => acc + (Number(entry.carbs) || 0), 0)
+    const totalFat = entries.reduce((acc, entry) => acc + (Number(entry.fat) || 0), 0)
 
     // Macro targets (estimados basados en porcentajes estándar 40% carb, 30% prot, 30% fat)
     const proteinTarget = Math.round((calorieTarget * 0.3) / 4)
@@ -157,19 +162,19 @@ export default function SummaryPage() {
                         <CardContent className="space-y-4">
                             <MacroProgress
                                 label="Proteína"
-                                current={summary?.total_protein || 0}
+                                current={totalProtein}
                                 target={proteinTarget}
                                 color="#1B3A5C"
                             />
                             <MacroProgress
                                 label="Carbohidratos"
-                                current={summary?.total_carbs || 0}
+                                current={totalCarbs}
                                 target={carbTarget}
                                 color="#E87722"
                             />
                             <MacroProgress
                                 label="Grasa"
-                                current={summary?.total_fat || 0}
+                                current={totalFat}
                                 target={fatTarget}
                                 color="#2E8B57"
                             />

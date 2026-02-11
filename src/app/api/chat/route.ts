@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { getCoachResponse } from '@/lib/ai/coach-agent'
 import { NextResponse } from 'next/server'
+import { getTodayDateString } from '@/lib/utils/dates'
 
 export async function POST(req: Request) {
     const supabase = await createClient()
@@ -11,7 +12,7 @@ export async function POST(req: Request) {
     }
 
     const { message, imageUrl, date } = await req.json()
-    const today = date || new Date().toISOString().split('T')[0]
+    const today = date || getTodayDateString()
     console.log('[CHAT API] New request:', { userId: user.id, message, hasImage: !!imageUrl, date: today })
 
     // Get profile

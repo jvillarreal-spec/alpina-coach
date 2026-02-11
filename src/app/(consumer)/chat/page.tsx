@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Progress } from '@/components/ui/progress'
 import { Camera, Send, Loader2, Plus } from 'lucide-react'
 import { toast } from 'sonner'
+import { getTodayDateString } from '@/lib/utils/dates'
 
 export default function ChatPage() {
     const [messages, setMessages] = useState<any[]>([])
@@ -40,7 +41,7 @@ export default function ChatPage() {
         const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single()
         setProfile(profile)
 
-        const today = new Date().toISOString().split('T')[0]
+        const today = getTodayDateString()
         const { data: summary } = await supabase
             .from('daily_summaries')
             .select('total_calories')
@@ -79,7 +80,7 @@ export default function ChatPage() {
         setMessages(prev => [...prev, tempUserMsg])
 
         try {
-            const localDate = new Date().toLocaleDateString('en-CA') // YYYY-MM-DD format
+            const localDate = getTodayDateString()
             const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
