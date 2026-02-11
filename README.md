@@ -14,12 +14,13 @@ Una aplicación web responsive diseñada para ayudar a los clientes de Alpina a 
 
 ```text
 alpina-coach/
-  app/              # Rutas de la aplicación (Auth, Consumer, Admin, API)
-  components/       # Componentes de UI reutilizables
-  lib/              # Lógica de Supabase, AI y utilidades
-  data/             # Catálogos de productos y alimentos
-  supabase/         # Migraciones de base de datos
-  types/            # Definiciones de TypeScript
+  src/
+    app/              # Rutas de la aplicación (Auth, Consumer, Admin, API)
+    components/       # Componentes de UI reutilizables
+    lib/              # Lógica de Supabase, AI y utilidades
+    data/             # Catálogos de productos y alimentos
+    types/            # Definiciones de TypeScript
+  supabase/           # Migraciones de base de datos e infraestructura
 ```
 
 ## 🛠️ Configuración Inicial

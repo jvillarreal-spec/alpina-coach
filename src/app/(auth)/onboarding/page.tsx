@@ -53,25 +53,41 @@ export default function OnboardingPage() {
     }, [step, data.current_weight, data.target_weight, data.goal, data.sex, data.age_range])
 
     const handleComplete = async () => {
-        const { data: { user } } = await supabase.auth.getUser()
-        if (!user) return
+        const { data: { user }, error: userError } = await supabase.auth.getUser()
+        if (userError || !user) {
+            console.error('[ONBOARDING] Get user error:', userError)
+            toast.error('No se pudo encontrar tu sesión de usuario.')
+            return
+        }
 
-        const { error } = await supabase.from('profiles').upsert({
+        console.log('[ONBOARDING] Attempting to save profile for:', user.id)
+        const profileData = {
             id: user.id,
-            email: user.email,
+            email: user.email || '',
             goal: data.goal,
-            current_weight: parseFloat(data.current_weight),
-            target_weight: parseFloat(data.target_weight),
+            current_weight: parseFloat(data.current_weight) || 0,
+            target_weight: parseFloat(data.target_weight) || 0,
             sex: data.sex,
             age_range: data.age_range,
             daily_calorie_target: data.daily_calorie_target,
             onboarding_completed: true,
             updated_at: new Date().toISOString(),
-        })
+        }
+
+        const { error } = await supabase
+            .from('profiles')
+            .upsert(profileData, { onConflict: 'id' })
 
         if (error) {
-            toast.error('Error al guardar tu perfil')
+            console.error('[ONBOARDING] Supabase Upsert Detailed Error:', {
+                message: error.message,
+                details: error.details,
+                hint: error.hint,
+                code: error.code
+            })
+            toast.error(`Error al guardar: ${error.message || 'Error desconocido'} (${error.code || ''})`)
         } else {
+            console.log('[ONBOARDING] Profile saved successfully')
             toast.success('¡Perfil completado!')
             router.push('/chat')
         }

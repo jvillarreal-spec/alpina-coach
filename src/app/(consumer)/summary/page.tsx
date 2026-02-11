@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Progress } from '@/components/ui/progress'
 import { format, subDays, startOfDay, isSameDay } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { ChevronLeft, ChevronRight, Camera, Utensils } from 'lucide-react'
@@ -103,7 +103,7 @@ export default function SummaryPage() {
                 <div className="space-y-6">
                     {/* Calorie Progress Card */}
                     <Card className="border-none bg-white shadow-lg overflow-hidden relative">
-                        <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 rounded-full bg-blue-50 opacity-50" />
+                        <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 -translate-y-8 rounded-full bg-blue-50 opacity-50" />
                         <CardContent className="pt-8 pb-8">
                             <div className="flex flex-col items-center">
                                 <div className="relative flex h-48 w-48 items-center justify-center">

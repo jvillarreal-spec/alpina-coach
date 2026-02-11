@@ -22,16 +22,16 @@ export function MessageBubble({ role, content, imageUrl, recommendation }: Messa
             )}
 
             <div
-                className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm ${isUser
-                        ? 'bg-[#1B3A5C] text-white rounded-tr-none'
-                        : 'bg-white border text-[#1A1A2E] rounded-tl-none'
+                className={`max-w-[85%] rounded-2xl px-5 py-4 border-2 shadow-md ${isUser
+                    ? 'bg-[#1B3A5C] text-white rounded-tr-none'
+                    : 'bg-white border text-[#1A1A2E] rounded-tl-none'
                     }`}
             >
                 <p className="whitespace-pre-wrap text-[15px] leading-relaxed">{content}</p>
             </div>
 
             {recommendation && (
-                <Card className="mt-3 w-[85%] border-[#E87722]/30 bg-[#FFF8F3] rounded-2xl overflow-hidden shadow-sm">
+                <Card className="mt-3 w-[98%] border-[#E87722] bg-[#FFF8F3] rounded-2xl overflow-hidden shadow-md">
                     <CardContent className="p-4">
                         <div className="mb-2 flex items-center justify-between">
                             <Badge className="bg-[#E87722] hover:bg-[#E87722]">Recomendado por tu coach</Badge>

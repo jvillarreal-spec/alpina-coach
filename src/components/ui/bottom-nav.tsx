@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { MessageCircle, BarChart2 } from 'lucide-react'
+import { MessageCircle, BarChart2, User } from 'lucide-react'
 
 export function BottomNav() {
     const pathname = usePathname()
@@ -10,6 +10,7 @@ export function BottomNav() {
     const tabs = [
         { name: 'Chat', href: '/chat', icon: MessageCircle },
         { name: 'Mi día', href: '/summary', icon: BarChart2 },
+        { name: 'Mi perfil', href: '/profile', icon: User },
     ]
 
     return (

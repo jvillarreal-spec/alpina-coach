@@ -79,10 +79,15 @@ export default function ChatPage() {
         setMessages(prev => [...prev, tempUserMsg])
 
         try {
+            const localDate = new Date().toLocaleDateString('en-CA') // YYYY-MM-DD format
             const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: currentInput, imageUrl: currentImage }),
+                body: JSON.stringify({
+                    message: currentInput,
+                    imageUrl: currentImage,
+                    date: localDate
+                }),
             })
 
             const data = await res.json()
@@ -139,7 +144,7 @@ export default function ChatPage() {
         <div className="flex h-screen flex-col">
             {/* Header with Progress */}
             <header className="sticky top-0 z-40 bg-white px-4 py-3 shadow-sm">
-                <div className="mx-auto flex w-full max-w-md items-center justify-between">
+                <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
                     <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-[#1B3A5C] flex items-center justify-center text-[10px] font-bold text-white">
                             ALPINA
@@ -165,10 +170,10 @@ export default function ChatPage() {
                 ref={scrollRef}
                 className="flex-1 overflow-y-auto bg-[#FAFBFC] p-4 pb-32"
             >
-                <div className="mx-auto max-w-md space-y-4">
+                <div className="mx-auto max-w-6xl space-y-4">
                     {messages.length === 0 && (
                         <div className="flex flex-col items-center justify-center py-20 text-center opacity-50">
-                            <div className="mb-4 h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center text-[#1B3A5C]">
+                            <div className="mb-4 w-full flex items-center justify-center text-[#1B3A5C]">
                                 <MessageBubble role="assistant" content="¡Hola! Soy tu Coach de Alpina. ¿Qué has comido hoy?" />
                             </div>
                         </div>
@@ -195,7 +200,7 @@ export default function ChatPage() {
             <div className="fixed bottom-16 left-0 right-0 z-40 border-t bg-white p-4">
                 <form
                     onSubmit={handleSend}
-                    className="mx-auto flex max-w-md items-end gap-2"
+                    className="mx-auto flex max-w-6xl items-end gap-2"
                 >
                     <div className="relative flex-1 overflow-hidden rounded-2xl border-2 border-gray-100 bg-gray-50 transition-all focus-within:border-[#1B3A5C]">
                         {selectedImage && (

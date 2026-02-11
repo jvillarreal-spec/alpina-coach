@@ -77,6 +77,9 @@ CREATE POLICY "Users can view their own profile" ON profiles
 CREATE POLICY "Users can update their own profile" ON profiles
   FOR UPDATE USING (auth.uid() = id);
 
+CREATE POLICY "Users can insert their own profile" ON profiles
+  FOR INSERT WITH CHECK (auth.uid() = id);
+
 -- Policies for Food Entries
 CREATE POLICY "Users can view their own food entries" ON food_entries
   FOR SELECT USING (auth.uid() = user_id);
@@ -95,9 +98,15 @@ CREATE POLICY "Users can insert their own messages" ON chat_messages
 CREATE POLICY "Users can view their own summaries" ON daily_summaries
   FOR SELECT USING (auth.uid() = user_id);
 
+CREATE POLICY "Users can insert their own summaries" ON daily_summaries
+  FOR INSERT WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can update their own summaries" ON daily_summaries
+  FOR UPDATE USING (auth.uid() = user_id);
+
 -- Admin Policies (simplified for MVP, typically checking admin_users table)
 CREATE POLICY "Admins can view all profiles" ON profiles
-  FOR SELECT USING (EXISTS (SELECT 1 FROM admin_users WHERE email = (SELECT email FROM auth.users WHERE id = auth.uid())));
+  FOR SELECT USING (EXISTS (SELECT 1 FROM admin_users WHERE email = auth.jwt() ->> 'email'));
 
 CREATE POLICY "Admins can view all summaries" ON daily_summaries
-  FOR SELECT USING (EXISTS (SELECT 1 FROM admin_users WHERE email = (SELECT email FROM auth.users WHERE id = auth.uid())));
+  FOR SELECT USING (EXISTS (SELECT 1 FROM admin_users WHERE email = auth.jwt() ->> 'email'));

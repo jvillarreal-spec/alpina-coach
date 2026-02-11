@@ -37,9 +37,13 @@ export async function updateSession(request: NextRequest) {
 
     const url = request.nextUrl.clone()
 
+    // DEBUG: Log the user and path
+    console.log(`[MIDDLEWARE] Path: ${url.pathname} | User: ${user ? user.email : 'No user'}`)
+
     // Admin protection
     if (url.pathname.startsWith('/admin')) {
         if (!user) {
+            console.log('[MIDDLEWARE] Admin path - No user, redirecting to login')
             url.pathname = '/login'
             return NextResponse.redirect(url)
         }
@@ -51,18 +55,21 @@ export async function updateSession(request: NextRequest) {
             .single()
 
         if (!admin) {
+            console.log('[MIDDLEWARE] Admin path - User is not admin, redirecting to chat')
             url.pathname = '/chat'
             return NextResponse.redirect(url)
         }
     }
 
     // Consumer protection
-    if (!user && !url.pathname.startsWith('/login')) {
+    if (!user && !url.pathname.startsWith('/login') && !url.pathname.startsWith('/auth')) {
+        console.log(`[MIDDLEWARE] Protected consumer path ${url.pathname} - No user, redirecting to login`)
         url.pathname = '/login'
         return NextResponse.redirect(url)
     }
 
     if (user && url.pathname.startsWith('/login')) {
+        console.log('[MIDDLEWARE] User exists on login page - Redirecting to chat')
         url.pathname = '/chat'
         return NextResponse.redirect(url)
     }
@@ -75,7 +82,7 @@ export async function updateSession(request: NextRequest) {
             .eq('id', user.id)
             .single()
 
-        if (profile && !profile.onboarding_completed) {
+        if (!profile || !profile.onboarding_completed) {
             url.pathname = '/onboarding'
             return NextResponse.redirect(url)
         }
