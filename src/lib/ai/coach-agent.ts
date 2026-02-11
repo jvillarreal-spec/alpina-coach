@@ -10,6 +10,7 @@ const anthropic = new Anthropic({
 
 export async function getCoachResponse(params: {
     userId: string
+    userName: string
     userGoal: string
     dailyTarget: number
     todayCalories: number
@@ -17,9 +18,10 @@ export async function getCoachResponse(params: {
     imageUrl?: string
     history: { role: 'user' | 'assistant'; content: string }[]
 }) {
-    const { userGoal, dailyTarget, todayCalories, message, imageUrl, history } = params
+    const { userName, userGoal, dailyTarget, todayCalories, message, imageUrl, history } = params
 
     const filledPrompt = SYSTEM_PROMPT
+        .replace('{{USER_NAME}}', userName)
         .replace('{{USER_GOAL}}', userGoal)
         .replace('{{DAILY_CALORIE_TARGET}}', dailyTarget.toString())
         .replace('{{TODAY_CALORIES}}', todayCalories.toString())

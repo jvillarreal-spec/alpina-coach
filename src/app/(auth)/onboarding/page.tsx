@@ -10,7 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Progress } from '@/components/ui/progress'
 import { calculateDailyCalories } from '@/lib/utils/calories'
 import { toast } from 'sonner'
-import { Check, Target, User, Calculator, Rocket } from 'lucide-react'
+import { Check, Target, User, Calculator, Rocket, AlertTriangle } from 'lucide-react'
+import { containsProfanity } from '@/lib/utils/validation'
 
 type OnboardingData = {
     goal: 'lose_weight' | 'gain_weight' | 'eat_better' | 'fitness'
@@ -19,6 +20,7 @@ type OnboardingData = {
     sex: 'male' | 'female' | 'other'
     age_range: '18-25' | '26-35' | '36-45' | '46-55' | '56+'
     daily_calorie_target: number
+    display_name: string
 }
 
 const steps = [
@@ -39,6 +41,7 @@ export default function OnboardingPage() {
         sex: 'female',
         age_range: '26-35',
         daily_calorie_target: 2000,
+        display_name: '',
     })
 
     useEffect(() => {
@@ -70,6 +73,7 @@ export default function OnboardingPage() {
             sex: data.sex,
             age_range: data.age_range,
             daily_calorie_target: data.daily_calorie_target,
+            display_name: data.display_name,
             onboarding_completed: true,
             updated_at: new Date().toISOString(),
         }
@@ -147,6 +151,20 @@ export default function OnboardingPage() {
 
                         {step === 2 && (
                             <div className="space-y-4">
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">¿Cómo quieres que te llamemos?</label>
+                                    <Input
+                                        value={data.display_name}
+                                        onChange={(e) => setData({ ...data, display_name: e.target.value })}
+                                        placeholder="Tu nombre"
+                                        className={containsProfanity(data.display_name) ? 'border-red-500 focus-visible:ring-red-500' : ''}
+                                    />
+                                    {containsProfanity(data.display_name) && (
+                                        <p className="text-[10px] text-red-500 flex items-center gap-1">
+                                            <AlertTriangle size={10} /> Por favor usa un nombre apropiado.
+                                        </p>
+                                    )}
+                                </div>
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium">Peso actual (kg)</label>
                                     <Input
@@ -250,7 +268,10 @@ export default function OnboardingPage() {
                         <Button
                             onClick={step === 4 ? handleComplete : nextStep}
                             className="flex-1 bg-[#1B3A5C]"
-                            disabled={step === 2 && (!data.current_weight || !data.age_range)}
+                            disabled={
+                                (step === 2 && (!data.current_weight || !data.age_range || !data.display_name || containsProfanity(data.display_name))) ||
+                                (step === 4 && containsProfanity(data.display_name))
+                            }
                         >
                             {step === 4 ? 'Empezar' : 'Siguiente'}
                         </Button>

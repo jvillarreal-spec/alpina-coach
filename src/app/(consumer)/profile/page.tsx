@@ -9,8 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { BottomNav } from '@/components/ui/bottom-nav'
 import { calculateDailyCalories } from '@/lib/utils/calories'
 import { toast } from 'sonner'
-import { LogOut, Save, User as UserIcon, Target, Scale, Calendar, Calculator } from 'lucide-react'
+import { LogOut, Save, User as UserIcon, Target, Scale, Calendar, Calculator, AlertTriangle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { containsProfanity } from '@/lib/utils/validation'
 
 type ProfileData = {
     goal: 'lose_weight' | 'gain_weight' | 'eat_better' | 'fitness'
@@ -19,6 +20,7 @@ type ProfileData = {
     sex: 'male' | 'female' | 'other'
     age_range: '18-25' | '26-35' | '36-45' | '46-55' | '56+'
     daily_calorie_target: number
+    display_name: string
 }
 
 export default function ProfilePage() {
@@ -33,6 +35,7 @@ export default function ProfilePage() {
         sex: 'female',
         age_range: '26-35',
         daily_calorie_target: 2000,
+        display_name: '',
     })
 
     useEffect(() => {
@@ -60,6 +63,7 @@ export default function ProfilePage() {
                     sex: profile.sex || 'female',
                     age_range: profile.age_range || '26-35',
                     daily_calorie_target: profile.daily_calorie_target || 2000,
+                    display_name: profile.display_name || '',
                 })
             }
             setIsLoading(false)
@@ -95,6 +99,7 @@ export default function ProfilePage() {
                 sex: data.sex,
                 age_range: data.age_range,
                 daily_calorie_target: data.daily_calorie_target,
+                display_name: data.display_name,
                 updated_at: new Date().toISOString(),
             })
             .eq('id', user.id)
@@ -176,6 +181,22 @@ export default function ProfilePage() {
                         </div>
                     </CardHeader>
                     <CardContent className="pt-6 space-y-4">
+                        <div className="space-y-2">
+                            <label className="text-xs font-semibold text-gray-500 uppercase flex items-center gap-1">
+                                <UserIcon size={12} /> Nombre
+                            </label>
+                            <Input
+                                value={data.display_name}
+                                onChange={(e) => setData({ ...data, display_name: e.target.value })}
+                                className={`bg-gray-50 border-none focus-visible:ring-1 ${containsProfanity(data.display_name) ? 'focus-visible:ring-red-500 ring-1 ring-red-500' : 'focus-visible:ring-[#1B3A5C]'}`}
+                            />
+                            {containsProfanity(data.display_name) && (
+                                <p className="text-[10px] text-red-500 flex items-center gap-1">
+                                    <AlertTriangle size={10} /> Por favor usa un nombre apropiado.
+                                </p>
+                            )}
+                        </div>
+
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label className="text-xs font-semibold text-gray-500 uppercase flex items-center gap-1">
@@ -268,7 +289,7 @@ export default function ProfilePage() {
                 <Button
                     onClick={handleSave}
                     className="w-full h-14 bg-[#1B3A5C] text-lg font-bold shadow-lg shadow-[#1B3A5C]/20 hover:bg-[#2A5298] transition-all"
-                    disabled={isSaving}
+                    disabled={isSaving || containsProfanity(data.display_name) || !data.display_name}
                 >
                     {isSaving ? (
                         <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />

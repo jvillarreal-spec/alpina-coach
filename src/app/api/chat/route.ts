@@ -46,6 +46,7 @@ export async function POST(req: Request) {
     try {
         const coachResult = await getCoachResponse({
             userId: user.id,
+            userName: profile?.display_name || 'Usuario',
             userGoal: profile?.goal || 'eat_better',
             dailyTarget: profile?.daily_calorie_target || 2000,
             todayCalories: summary?.total_calories || 0,
